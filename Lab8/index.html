@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список справ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>📋 Список справ</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Назва</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody id="todosTable"></tbody>
+    </table>
+    
+    <button onclick="loadTodos()">🔄 Оновити</button>
+
+    <h3>➕ Додати нову справу</h3>
+    <form id="todoForm">
+        <input type="text" id="title" placeholder="Назва справи" required>
+        <label>
+            <input type="checkbox" id="completed"> Виконано
+        </label>
+        <button type="submit">➕ Додати справу</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
