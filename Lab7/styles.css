@@ -27,7 +27,7 @@ section {
 }
 
 .button:active {
-  transform: scale(1.2);
+  transform: scale(2);
 }
 
 .content-wrapper {
