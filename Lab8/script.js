@@ -1,6 +1,5 @@
-let currentId = 0; // буде зберігати останній ID
+let currentId = 0;
 
-// Завантаження справ з API
 function loadTodos() {
     fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
         .then(response => {
@@ -11,17 +10,15 @@ function loadTodos() {
         })
         .then(data => {
             displayTodos(data);
-            // Оновлюємо поточний максимальний ID
             const ids = data.map(todo => todo.id);
             currentId = Math.max(...ids);
         })
         .catch(error => console.error('Помилка:', error));
 }
 
-// Відображення справ у таблиці
 function displayTodos(todos) {
     const table = document.getElementById('todosTable');
-    table.innerHTML = ''; // Очистити таблицю
+    table.innerHTML = '';
 
     todos.forEach(todo => {
         const row = document.createElement('tr');
@@ -34,7 +31,6 @@ function displayTodos(todos) {
     });
 }
 
-// Обробка додавання нової справи
 document.getElementById('todoForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -42,7 +38,7 @@ document.getElementById('todoForm').addEventListener('submit', function (e) {
     const completed = document.getElementById('completed').checked;
 
     if (title) {
-        currentId++; // Збільшуємо ID
+        currentId++;
 
         const table = document.getElementById('todosTable');
         const row = document.createElement('tr');
@@ -57,5 +53,4 @@ document.getElementById('todoForm').addEventListener('submit', function (e) {
     }
 });
 
-// Автоматичне завантаження при старті
 window.onload = loadTodos;
