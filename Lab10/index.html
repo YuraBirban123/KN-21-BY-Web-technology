@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuriy Birban | Web3 Портфоліо</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Логотип" class="logo" />
+    <h1>Yuriy Birban</h1>
+    <p>Web3 ентузіаст — тестнети, аірдропи, ретродропи</p>
+    <nav>
+      <a href="#about">Про себе</a>
+      <a href="#skills">Навички</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <button id="theme-toggle">Змінити тему</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Про себе</h2>
+      <p>Мене звати Yuriy Birban. Я займаюся вивченням Web3-проєктів, активний учасник тестнетів, аірдропів та ретродропів. Також трохи трейджу криптовалюту у вільний час.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Навички</h2>
+      <div class="chart">
+        <div class="bar-container">
+          <div class="bar" data-percent="90"></div>
+          <span>HTML</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" data-percent="80"></div>
+          <span>CSS</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" data-percent="70"></div>
+          <span>JavaScript</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" data-percent="60"></div>
+          <span>Ретродропи</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" data-percent="80"></div>
+          <span>Аірдропи</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" data-percent="90"></div>
+          <span>Тестнети</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar" data-percent="30"></div>
+          <span>Трейдинг</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакти</h2>
+      <form id="contact-form">
+        <label>Ім’я: <input type="text" id="form-name" required /></label><br />
+        <label>Email: <input type="email" id="form-email" required /></label><br />
+        <label>Повідомлення:<br /><textarea id="form-message" required></textarea></label><br />
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+
+    <section class="info">
+      <p>Переглядів: <span id="view-count">0</span></p>
+      <p>Час на сайті: <span id="timer">0</span> сек</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Yuriy Birban</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
